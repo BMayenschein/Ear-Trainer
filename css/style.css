@@ -11,8 +11,40 @@
 /* LAYOUT
 /*******************************************/
 
+.keyboard {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+  height: 300px;
+}
 
 
+.note {
+  height: 300px;
+  border: 1px solid black;
+  width: 100%;
+  text-align: center;
+}
+
+.note:hover {
+  background-color:rgb(245, 243, 243);
+  cursor:pointer;
+}
+
+.sharp {
+  width: 40%;
+  height: 65%;
+  margin-left: -3%;
+  margin-right: -3%;
+  background-color: black;
+  color: white;
+  z-index: 2;
+}
+
+.sharp:hover {
+  background-color: rgb(48, 43, 43);
+}
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
