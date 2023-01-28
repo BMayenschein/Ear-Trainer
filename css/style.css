@@ -32,6 +32,10 @@
   cursor:pointer;
 }
 
+.note:active {
+  background-color: rgb(134, 130, 130);
+}
+
 .sharp {
   width: 40%;
   height: 65%;
@@ -44,6 +48,10 @@
 
 .sharp:hover {
   background-color: rgb(48, 43, 43);
+}
+
+.sharp:active {
+  background-color: rgb(107, 98, 98);
 }
 /******************************************
 /* ADDITIONAL STYLES
