@@ -11,6 +11,10 @@
 /* LAYOUT
 /*******************************************/
 
+h1 {
+  margin: 0 auto;
+}
+
 .keyboard {
   margin: 0 auto;
   display: flex;
