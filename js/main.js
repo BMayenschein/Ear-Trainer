@@ -34,19 +34,38 @@ class Training {
         return [randNote, correctNote]
     }
 
+    addWinMessage() {
+        let newTag = document.createElement('h2');
+        newTag.className = 'correct';
+        newTag.innerHTML = 'Correct!';
+        let game = document.querySelector('.game');
+        game.appendChild(newTag);
+    }
+
+    removeWinMessage() {
+        let winMessage = document.querySelector('.correct');
+        if (winMessage !== null) {
+            winMessage.remove();
+        }
+        
+    }
     startTraining() {
+        this.removeWinMessage();
         let values = this.randomNote();
         let randomNote = values[0];
         let correctNote = values[1];
 
-        let correctClick = function() {
+        let correctClick = () => {
             console.log('Correct!');
+            this.addWinMessage();
             correctNote.removeEventListener('click', correctClick);
         }
         correctNote.addEventListener('click', correctClick);
         console.log(randomNote);
         console.log(correctNote);
     }
+
+
 }
 
 let train = new Training();
