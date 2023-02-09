@@ -2,31 +2,53 @@
 *{
   box-sizing: border-box;
 }
+html, body {
+  height: 100%;
+  background-color: #EEE3CB;
+}
 
+.portrait {
+  display: none;
+}
 h1 {
   margin: 0 auto;
+  padding: 2% 0;
+  font-size: 2rem;
 }
 
 .game {
+  height: 100%;
   display: flex;
-  width: 100%;
-  justify-content: space-evenly;
+  flex-direction: column;
 }
 
-.start {
+
+.start{
   height: 100px;
   width: 150px;
   align-self: center;
+  background-color: white;
 }
 
+/* .container {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+} */
+
+
 .keyboard {
+  padding-bottom: 1rem;
   display: flex;
   justify-content: space-around;
-  flex-basis: 60%;
-  height: 350px;
+  width: 75%;
+  align-self: center;
+  height: 450px;
 }
 
 .correct {
+  padding-top: 1rem;
+  font-size: 2rem;
   align-self: center;
 }
 .note {
@@ -34,6 +56,7 @@ h1 {
   border: 1px solid black;
   width: 100%;
   text-align: center;
+  background-color: white;
 }
 
 .note:hover {
@@ -42,7 +65,8 @@ h1 {
 }
 
 .note:active {
-  background-color: rgb(134, 130, 130);
+  /* background-color: rgb(134, 130, 130); */
+  background-color: #D7C0AE;
 }
 
 .sharp {
@@ -50,16 +74,60 @@ h1 {
   height: 62%;
   margin-left: -3%;
   margin-right: -3%;
-  background-color: black;
+  /* background-color: black; */
+  background-color: #000000;
   color: white;
   z-index: 2;
 }
 
 .sharp:hover {
-  background-color: rgb(48, 43, 43);
+  background-color: #2b2b2b
 }
 
 .sharp:active {
-  background-color: rgb(107, 98, 98);
+  background-color: #282A3A;
 }
 
+.bottom-row {
+  display: flex;
+  flex-direction: column;
+}
+
+
+@media only screen and (orientation:portrait) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .portrait {
+    display: block;
+    font-size: 4rem;
+  }
+  .game {
+    display: none;
+  }
+}
+
+
+@media (max-height: 450px) {
+  .keyboard {
+    height: 250px;
+    width: 90%;
+  }
+
+  .start {
+    height: 75px;
+    width: 125px;
+  }
+
+  .correct {
+    padding-left: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .bottom-row {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
